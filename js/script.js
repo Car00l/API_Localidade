@@ -12,6 +12,15 @@ $(document).ready(function(e) {
         }
     })
 
+    $('#TCIDADE').hide()
+
+    $('#UF').on('change', function(e){
+        $('#TCIDADE').show()
+
+        if ($('#UF').click){
+            $('#CIDADE').empty()
+        }
+
     var uf = $('#UF').val();
     $.ajax({
         type: 'GET',
@@ -24,5 +33,5 @@ $(document).ready(function(e) {
     })
     }
 })
-
+})
 })
